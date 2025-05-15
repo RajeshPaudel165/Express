@@ -1,0 +1,24 @@
+The views directory is typically used to store template files for rendering HTML pages. Since you haven't specified any particular view files, I will create a basic structure for a view file that could be used in an Express application. 
+
+Here is the content for a sample view file named `index.ejs` that you might want to include in the `/express-app/express-app/views` directory:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express App</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Express App</h1>
+    </header>
+    <main>
+        <p>This is a sample view for the Express application.</p>
+    </main>
+    <footer>
+        <p>&copy; 2023 Express App</p>
+    </footer>
+</body>
+</html>

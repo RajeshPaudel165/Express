@@ -86,11 +86,38 @@ express-app
 ### Health Check
 - `GET /api/health` - API health check
 
+## Deployment
+
+### Deploying to Heroku
+
+1. Create a Heroku account if you don't have one
+2. Install the Heroku CLI: `npm install -g heroku`
+3. Login to Heroku: `heroku login`
+4. Create a new Heroku app: `heroku create cougarexpress-api`
+5. Set environment variables:
+   ```
+   heroku config:set MONGODB_URI=your_mongodb_uri
+   heroku config:set ACCESS_TOKEN_SECRET=your_secret_key
+   ```
+6. Push to Heroku: `git push heroku main`
+7. Open the app: `heroku open`
+
+### Deploying to Render
+
+1. Create a Render account (https://render.com)
+2. Create a new Web Service
+3. Connect to your GitHub repository
+4. Set the following settings:
+   - Build Command: `npm install`
+   - Start Command: `npm start`
+5. Add environment variables in the Render dashboard
+
 ## Built With
 
 - [Express.js](https://expressjs.com/) - Web framework
 - [MongoDB](https://www.mongodb.com/) - Database
 - [Mongoose](https://mongoosejs.com/) - MongoDB object modeling
+- [JSON Web Tokens](https://jwt.io/) - Authentication
 
 ## License
 

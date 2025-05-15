@@ -6,7 +6,10 @@ const path = require('path');
 require('dotenv').config();
 
 const routes = require('./routes/index');
+const authRoutes = require('./routes/authRoutes');
 const { mongoURI, options } = require('./config/database');
+// Initialize Firebase
+require('./config/firebase');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -24,6 +27,7 @@ mongoose.connect(mongoURI, options)
 
 // Routes
 app.use('/api', routes);
+app.use('/auth', authRoutes);
 
 // Root route
 app.get('/', (req, res) => {
